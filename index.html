@@ -4,16 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DAGAKPLUS TECHNOLOGY</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/style.css" />
-
-  <!-- SEO -->
   <meta name="description" content="DAGAKPLUS TECHNOLOGY | Cloud · Infra · DR/BCP 기반 IT 인프라 설계부터 구축, 운영까지" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
-<!-- ================= NAV ================= -->
 <header class="nav">
   <div class="inner">
     <a class="brand" href="index.html">
@@ -32,7 +27,7 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <div style="display:flex; gap:10px; align-items:center;">
+    <div class="navActions">
       <button class="btn ghost" id="themeBtn">🌙</button>
       <a class="btn primary" href="contact.html">프로젝트 문의</a>
       <button class="hamburger" id="hamburgerBtn">☰</button>
@@ -40,8 +35,7 @@
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section>
+<section class="hero">
   <div class="wrap">
     <div class="card pad">
       <p class="kicker">IT SOLUTIONS / CLOUD / INFRA / DR</p>
@@ -50,8 +44,7 @@
         DAGAKPLUS TECHNOLOGY는 가상화·클라우드·스토리지·DR/BCP 기반 인프라를<br>
         <b>설계 → 구축 → 운영</b>까지 한 번에 제공합니다.
       </p>
-
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <div class="actions">
         <a class="btn primary" href="services.html">서비스 보기</a>
         <a class="btn" href="notice.html">전자공고</a>
         <a class="btn" href="contact.html">문의하기</a>
@@ -60,7 +53,6 @@
   </div>
 </section>
 
-<!-- ================= QUICK FACTS ================= -->
 <section>
   <div class="wrap">
     <div class="card pad">
@@ -75,71 +67,53 @@
   </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
 <section id="services">
   <div class="wrap">
-
     <div class="pagehead">
       <h1>핵심 서비스</h1>
       <p>필요한 영역만 선택해도 됩니다</p>
     </div>
 
     <div class="cards">
-
-      <!-- Service 1 -->
       <div class="card svc">
         <div class="pad">
           <div class="icon">☁️</div>
           <h3>Cloud & Platform</h3>
-          <p>
-            프라이빗·하이브리드 클라우드 구축, 자동화 기반 운영
-          </p>
+          <p>프라이빗·하이브리드 클라우드 구축, 자동화 기반 운영</p>
         </div>
       </div>
 
-      <!-- Service 2 -->
       <div class="card svc">
         <div class="pad">
           <div class="icon">🧊</div>
           <h3>Virtualization & VDI</h3>
-          <p>
-            가상화/VDI 설계·이관·최적화, 성능 병목 제거
-          </p>
+          <p>가상화/VDI 설계·이관·최적화, 성능 병목 제거</p>
         </div>
       </div>
 
-      <!-- Service 3 -->
       <div class="card svc">
         <div class="pad">
           <div class="icon">🛡️</div>
           <h3>DR / BCP</h3>
-          <p>
-            재해복구 구축, 시나리오/리허설, 모의훈련 및 검증
-          </p>
+          <p>재해복구 구축, 시나리오/리허설, 모의훈련 및 검증</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer class="foot">
   <div class="wrap">
-    <small>
-      © <span id="year"></span> DAGAKPLUS TECHNOLOGY · All rights reserved.
-    </small>
+    <small>© <span id="year"></span> DAGAKPLUS TECHNOLOGY · All rights reserved.</small>
   </div>
 </footer>
 
-<!-- ================= DRAWER ================= -->
 <div class="drawerOverlay" id="drawerOverlay"></div>
 <aside class="drawer">
   <div class="drawerHeader">
     <strong>DAGAKPLUS TECHNOLOGY</strong>
     <button class="btn" id="drawerCloseBtn">✕</button>
   </div>
-
   <nav class="drawerNav">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -147,7 +121,6 @@
     <a href="notice.html">전자공고</a>
     <a href="contact.html">Contact</a>
   </nav>
-
   <div class="drawerActions">
     <a class="btn primary" href="contact.html">프로젝트 문의</a>
     <a class="btn" href="mailto:dagak@dagakplus.co.kr">메일</a>
@@ -155,8 +128,6 @@
   </div>
 </aside>
 
-<!-- JS -->
 <script src="assets/app.js"></script>
-
 </body>
 </html>
