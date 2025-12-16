@@ -1,75 +1,33 @@
-<form
-  class="formGrid"
-  action="https://formspree.io/f/xxxxabcd"
-  method="POST"
->
-  <!-- 이름 -->
+<form class="formGrid"
+      action="https://formspree.io/f/xxxxabcd"
+      method="POST">
+
   <div class="field">
     <label>전체 이름<span class="req">*</span></label>
-    <input
-      class="input"
-      type="text"
-      name="name"
-      placeholder="홍길동"
-      required
-    />
+    <input class="input" type="text" name="name" placeholder="홍길동" required>
   </div>
 
-  <!-- 이메일 -->
   <div class="field">
     <label>이메일<span class="req">*</span></label>
-    <input
-      class="input"
-      type="email"
-      name="email"
-      placeholder="name@company.com"
-      required
-    />
+    <input class="input" type="email" name="email" placeholder="name@company.com" required>
   </div>
 
-  <!-- 메시지 -->
   <div class="field">
     <label>메시지<span class="req">*</span></label>
-    <textarea
-      class="textarea"
-      name="message"
-      placeholder="문의 내용을 입력해주세요."
-      required
-    ></textarea>
+    <textarea class="textarea" name="message" placeholder="문의 내용을 입력해주세요." required></textarea>
   </div>
 
-  <!-- ✅ 봇 방지 (사람은 안 보임) -->
   <input type="text" name="_gotcha" style="display:none">
-
-  <!-- 메일 제목 -->
-  <input
-    type="hidden"
-    name="_subject"
-    value="[DAGAKPLUS] 홈페이지 문의"
-  />
-
-  <!-- 성공 페이지 -->
-  <input
-    type="hidden"
-    name="_next"
-    value="https://dagakplus.co.kr/thanks.html"
-  />
-
-  <!-- 메일 포맷 -->
-  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_subject" value="[DAGAKPLUS] 홈페이지 문의">
+  <input type="hidden" name="_next" value="https://dagakplus.co.kr/thanks.html">
+  <input type="hidden" name="_template" value="table">
 
   <div class="formActions">
-    <button class="btn primary" type="submit">
-      메시지 보내기
-    </button>
-    <a class="btn" href="mailto:dagak@dagakplus.co.kr">
-      메일로 문의
-    </a>
+    <button class="btn primary" type="submit">메시지 보내기</button>
+    <a class="btn" href="mailto:dagak@dagakplus.co.kr">메일로 문의</a>
   </div>
 
   <div class="formHint">
     * 입력하신 정보는 문의 응답 외 다른 용도로 사용되지 않습니다.
   </div>
 </form>
-
-
