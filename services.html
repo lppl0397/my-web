@@ -1,108 +1,95 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | DAGAKPLUS TECHNOLOGY</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+
 <header class="nav">
   <div class="inner">
     <a class="brand" href="index.html">
-      <div class="logo" aria-hidden="true"></div>
-      <div>
-        <span>DAGAKPLUS <span style="opacity:.9">TECHNOLOGY</span></span>
-        <small>Driving Technology Forward</small>
+      <div class="logo"></div>
+      <div class="brandText">
+        <div class="brandTitle">DAGAKPLUS TECHNOLOGY</div>
+        <div class="brandSub">Driving Technology Forward</div>
       </div>
     </a>
 
-    <nav class="menu" aria-label="Primary">
-      <a href="index.html" data-page="index.html">Home</a>
-      <a href="services.html" data-page="services.html">Services</a>
-      <a href="company.html" data-page="company.html">Company</a>
-      <a href="notice.html" data-page="notice.html">전자공고</a>
-      <a href="contact.html" data-page="contact.html">Contact</a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a class="active" href="services.html">Services</a>
+      <a href="company.html">Company</a>
+      <a href="notice.html">전자공고</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
-    <div style="display:flex; gap:10px; align-items:center;">
-      <button class="btn ghost" id="themeBtn" aria-label="Toggle theme">🌙</button>
-      <a class="btn primary" href="contact.html">프로젝트 문의</a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+    <div class="navRight">
+      <button class="iconBtn" id="themeBtn">🌙</button>
+      <a class="ctaBtn" href="contact.html">프로젝트 문의</a>
+      <button class="iconBtn hamburger" id="hamburgerBtn">☰</button>
     </div>
   </div>
 </header>
 
-<!-- Drawer -->
-<div class="drawerOverlay" id="drawerOverlay" aria-hidden="true"></div>
-<aside class="drawer" aria-label="Mobile menu">
-  <div class="drawerHeader">
-    <div style="font-weight:950; letter-spacing:.2px;">
-      DAGAKPLUS TECHNOLOGY
-      <div style="font-size:12px; color: var(--muted); font-weight:900; margin-top:3px;">
-        Driving Technology Forward
-      </div>
-    </div>
-    <button class="btn" id="drawerCloseBtn" aria-label="Close menu">✕</button>
-  </div>
-
-  <nav class="drawerNav" aria-label="Drawer links">
-    <a href="index.html" data-page="index.html">Home</a>
-    <a href="services.html" data-page="services.html">Services</a>
-    <a href="company.html" data-page="company.html">Company</a>
-    <a href="notice.html" data-page="notice.html">전자공고</a>
-    <a href="contact.html" data-page="contact.html">Contact</a>
-  </nav>
-
-  <div class="drawerActions">
-    <a class="btn primary" href="contact.html">프로젝트 문의</a>
-    <a class="btn" href="mailto:dagak@dagakplus.co.kr?subject=[DAGAKPLUS]%20문의">메일</a>
-    <a class="btn" href="tel:+821094598976">전화</a>
-  </div>
-</aside>
-
-  <main class="wrap">
+<section class="section">
+  <div class="wrap">
     <div class="pagehead">
-      <div>
-        <h1>Services</h1>
-        <p>설계 → 구축 → 운영까지 한 번에</p>
-      </div>
-      <a class="btn" href="contact.html">견적/상담 요청</a>
+      <h1>Services</h1>
+      <p>설계부터 운영까지</p>
     </div>
 
     <div class="cards">
-      <div class="card svc"><div class="pad">
-        <div class="icon">☁️</div><h3>Cloud & Platform</h3>
-        <p>프라이빗/하이브리드 클라우드, 표준 아키텍처, IaC/자동화 운영 기반</p>
-      </div></div>
-      <div class="card svc"><div class="pad">
-        <div class="icon">🧊</div><h3>Virtualization & VDI</h3>
-        <p>클러스터 설계/마이그레이션/최적화, 사용자 경험(UX) 개선</p>
-      </div></div>
-      <div class="card svc"><div class="pad">
-        <div class="icon">🛡️</div><h3>DR / BCP</h3>
-        <p>RPO/RTO 기반 설계, 복구 시나리오/런북, 모의훈련 및 검증</p>
-      </div></div>
-      <div class="card svc"><div class="pad">
-        <div class="icon">🗄️</div><h3>Storage & Backup</h3>
-        <p>용량 산정, 보존 정책, Immutable/랜섬웨어 대비 설계</p>
-      </div></div>
-      <div class="card svc"><div class="pad">
-        <div class="icon">🔧</div><h3>Build & Migration</h3>
-        <p>P2V/V2V/클라우드 이관, Cut-over/롤백 계획 수립 및 수행</p>
-      </div></div>
-      <div class="card svc"><div class="pad">
-        <div class="icon">📈</div><h3>Managed Ops</h3>
-        <p>정기점검/장애대응/성능튜닝, 월간 리포팅 및 개선안 제시</p>
-      </div></div>
+      <div class="card svc">
+        <div class="pad">
+          <div class="icon">☁️</div>
+          <h3>Cloud & Platform</h3>
+          <p>프라이빗·하이브리드 클라우드, 자동화 기반 운영</p>
+        </div>
+      </div>
+
+      <div class="card svc">
+        <div class="pad">
+          <div class="icon">🧊</div>
+          <h3>Virtualization & VDI</h3>
+          <p>가상화/VDI 설계·이관·최적화</p>
+        </div>
+      </div>
+
+      <div class="card svc">
+        <div class="pad">
+          <div class="icon">🛡️</div>
+          <h3>DR / BCP</h3>
+          <p>재해복구 구축, 시나리오, 모의훈련 및 검증</p>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <footer class="foot">
-      <b style="color:var(--text)">DAGAKPLUS TECHNOLOGY</b><br/>
-      <span>© <span id="year"></span> DAGAKPLUS. All rights reserved.</span>
-    </footer>
-  </main>
+<footer class="foot">
+  <div class="wrap tight">
+    <small>© <span id="year"></span> DAGAKPLUS TECHNOLOGY</small>
+  </div>
+</footer>
 
-  <script src="assets/app.js"></script>
+<div class="drawerOverlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawerHeader">
+    <strong>DAGAKPLUS TECHNOLOGY</strong>
+    <button class="iconBtn" id="drawerCloseBtn">✕</button>
+  </div>
+  <nav class="drawerNav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="company.html">Company</a>
+    <a href="notice.html">전자공고</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</aside>
+
+<script src="assets/app.js"></script>
 </body>
 </html>
