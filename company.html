@@ -1,113 +1,76 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Company | DAGAKPLUS TECHNOLOGY</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+
 <header class="nav">
   <div class="inner">
     <a class="brand" href="index.html">
-      <div class="logo" aria-hidden="true"></div>
-      <div>
-        <span>DAGAKPLUS <span style="opacity:.9">TECHNOLOGY</span></span>
-        <small>Driving Technology Forward</small>
+      <div class="logo"></div>
+      <div class="brandText">
+        <div class="brandTitle">DAGAKPLUS TECHNOLOGY</div>
+        <div class="brandSub">Driving Technology Forward</div>
       </div>
     </a>
 
-    <nav class="menu" aria-label="Primary">
-      <a href="index.html" data-page="index.html">Home</a>
-      <a href="services.html" data-page="services.html">Services</a>
-      <a href="company.html" data-page="company.html">Company</a>
-      <a href="notice.html" data-page="notice.html">전자공고</a>
-      <a href="contact.html" data-page="contact.html">Contact</a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a class="active" href="company.html">Company</a>
+      <a href="notice.html">전자공고</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
-    <div style="display:flex; gap:10px; align-items:center;">
-      <button class="btn ghost" id="themeBtn" aria-label="Toggle theme">🌙</button>
-      <a class="btn primary" href="contact.html">프로젝트 문의</a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+    <div class="navRight">
+      <button class="iconBtn" id="themeBtn">🌙</button>
+      <a class="ctaBtn" href="contact.html">프로젝트 문의</a>
+      <button class="iconBtn hamburger" id="hamburgerBtn">☰</button>
     </div>
   </div>
 </header>
 
-<!-- Drawer -->
-<div class="drawerOverlay" id="drawerOverlay" aria-hidden="true"></div>
-<aside class="drawer" aria-label="Mobile menu">
-  <div class="drawerHeader">
-    <div style="font-weight:950; letter-spacing:.2px;">
-      DAGAKPLUS TECHNOLOGY
-      <div style="font-size:12px; color: var(--muted); font-weight:900; margin-top:3px;">
-        Driving Technology Forward
-      </div>
+<section class="section">
+  <div class="wrap">
+    <div class="pagehead">
+      <h1>Company</h1>
+      <p>DAGAKPLUS TECHNOLOGY</p>
     </div>
-    <button class="btn" id="drawerCloseBtn" aria-label="Close menu">✕</button>
-  </div>
 
-  <nav class="drawerNav" aria-label="Drawer links">
-    <a href="index.html" data-page="index.html">Home</a>
-    <a href="services.html" data-page="services.html">Services</a>
-    <a href="company.html" data-page="company.html">Company</a>
-    <a href="notice.html" data-page="notice.html">전자공고</a>
-    <a href="contact.html" data-page="contact.html">Contact</a>
+    <div class="card pad">
+      <p class="sub">
+        DAGAKPLUS TECHNOLOGY는 가상화, 클라우드, DR/BCP 기반의<br>
+        엔터프라이즈 인프라를 전문으로 하는 IT 기술 기업입니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap tight">
+    <small>© <span id="year"></span> DAGAKPLUS TECHNOLOGY</small>
+  </div>
+</footer>
+
+<div class="drawerOverlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawerHeader">
+    <strong>DAGAKPLUS TECHNOLOGY</strong>
+    <button class="iconBtn" id="drawerCloseBtn">✕</button>
+  </div>
+  <nav class="drawerNav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="company.html">Company</a>
+    <a href="notice.html">전자공고</a>
+    <a href="contact.html">Contact</a>
   </nav>
-
-  <div class="drawerActions">
-    <a class="btn primary" href="contact.html">프로젝트 문의</a>
-    <a class="btn" href="mailto:dagak@dagakplus.co.kr?subject=[DAGAKPLUS]%20문의">메일</a>
-    <a class="btn" href="tel:+821094598976">전화</a>
-  </div>
 </aside>
 
-  <main class="wrap">
-    <div class="pagehead">
-      <div>
-        <h1>Company</h1>
-        <p>신뢰 가능한 인프라 파트너</p>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="card"><div class="pad">
-        <h3 style="margin:0 0 10px">우리가 하는 일</h3>
-        <p class="sub" style="margin:0">
-          고객의 인프라를 “잘 돌아가게” 만드는 게 목표입니다. 구축은 시작일 뿐이고,
-          운영 난이도와 장애 대응까지 고려해서 설계합니다.
-        </p>
-
-        <div style="height:14px"></div>
-        <h3 style="margin:0 0 10px">핵심 원칙</h3>
-        <ul class="list">
-          <li><b>문서화</b> — 운영 가능한 수준의 산출물</li>
-          <li><b>검증</b> — POC로 리스크를 먼저 제거</li>
-          <li><b>복구 전제</b> — DR/BCP를 기본값으로 설계</li>
-          <li><b>개선</b> — 운영하며 더 좋아지게 튜닝</li>
-        </ul>
-      </div></div>
-
-      <div class="card"><div class="pad">
-        <h3 style="margin:0 0 10px">기본 정보(예시)</h3>
-        <table class="table" aria-label="Company info">
-          <tr><th>법인명</th><td>DAGAKPLUS TECHNOLOGY</td></tr>
-          <tr><th>주요 사업</th><td>Cloud / Virtualization / DR / Managed Ops</td></tr>
-          <tr><th>소재지</th><td>Seoul, KR</td></tr>
-          <tr><th>대표 메일</th><td><a href="mailto:sales@example.com">sales@example.com</a></td></tr>
-          <tr><th>대표 전화</th><td>+82-10-0000-0000</td></tr>
-        </table>
-        <p style="margin:10px 0 0; color:var(--muted); font-weight:800">
-          <small class="mono">※ 위 정보는 너 회사 정보로 바꿔서 쓰면 됨.</small>
-        </p>
-      </div></div>
-    </div>
-
-    <footer class="foot">
-      <b style="color:var(--text)">DAGAKPLUS TECHNOLOGY</b><br/>
-      <span>© <span id="year"></span> DAGAKPLUS. All rights reserved.</span>
-    </footer>
-  </main>
-
-  <script src="assets/app.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>
