@@ -368,3 +368,60 @@ a{color:inherit;text-decoration:none}
 
 .drawerOpen .drawerOverlay{opacity:1; pointer-events:auto;}
 .drawerOpen .drawer{transform: translateX(0);}
+
+/* ===== NAV OVERLAP FIX (paste at end of style.css) ===== */
+
+.nav .inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+/* ✅ min-width 강제 제거 + 안전한 flex 설정 */
+.brand{
+  min-width:0 !important;
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brandText{
+  min-width:0;
+  white-space:nowrap;                 /* 브랜드 텍스트는 한 줄 유지 */
+}
+
+.brandTitle, .brandSub{
+  white-space:nowrap;
+}
+
+/* ✅ 가운데 메뉴는 줄어들 수 있어야 함 */
+.menu{
+  min-width:0 !important;
+  flex:1 1 auto;                      /* ⭐ 핵심: 줄어들 수 있게 */
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.menu a{
+  white-space:nowrap;
+}
+
+/* ✅ 오른쪽 버튼 그룹도 min-width 강제 제거 */
+.navRight{
+  min-width:0 !important;
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* ✅ 화면이 조금만 좁아지면 겹치기 전에 메뉴 숨김 (브레이크포인트를 올림) */
+@media (max-width: 1100px){
+  .menu{display:none;}
+  .hamburger{display:inline-flex;}
+}
+
+
