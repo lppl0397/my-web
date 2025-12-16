@@ -263,5 +263,44 @@ small.mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "
 .drawerOpen .drawerOverlay{opacity:1; pointer-events:auto;}
 .drawerOpen .drawer{transform: translateX(0);}
 
+/* === Services cards: 3 boxes in a row (like PPT rectangles) === */
+.cards{
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 28px !important;
+  align-items: stretch !important;
+}
+
+@media (max-width: 920px){
+  .cards{ grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 560px){
+  .cards{ grid-template-columns: 1fr !important; }
+}
+
+/* Make each service card a clean rectangle */
+.card.svc{
+  min-height: 210px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Prevent weird word breaking */
+.card.svc, .card.svc *{
+  word-break: keep-all;
+  overflow-wrap: anywhere; /* allow natural wrap, but not per-letter */
+  hyphens: none;
+}
+
+/* Clamp description lines to keep boxes same size */
+.card.svc p{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;      /* show max 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 
 
