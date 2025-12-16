@@ -1,54 +1,69 @@
-(function(){
-  const root = document.documentElement;
+// ===== helpers =====
+const $ = (sel) => document.querySelector(sel);
 
-  // Theme
-  const themeBtn = document.getElementById('themeBtn');
-  const saved = localStorage.getItem('theme');
+function setYear() {
+  const y = $("#year");
+  if (y) y.textContent = String(new Date().getFullYear());
+}
 
-  function applyTheme(t){
-    root.setAttribute('data-theme', t);
-    if(themeBtn) themeBtn.textContent = (t === 'light') ? '🌞' : '🌙';
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+
+  const btn = $("#themeBtn");
+  if (btn) btn.textContent = theme === "light" ? "☀️" : "🌙";
+}
+
+function initTheme() {
+  const saved = localStorage.getItem("theme");
+  if (saved === "light" || saved === "dark") {
+    applyTheme(saved);
+  } else {
+    applyTheme("dark");
   }
 
-  applyTheme(saved || 'dark');
-
-  if(themeBtn){
-    themeBtn.addEventListener('click', () => {
-      const cur = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      localStorage.setItem('theme', cur);
-      applyTheme(cur);
+  const btn = $("#themeBtn");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      const cur = document.documentElement.getAttribute("data-theme") || "dark";
+      applyTheme(cur === "dark" ? "light" : "dark");
     });
   }
+}
 
-  // Year
-  const year = document.getElementById('year');
-  if(year) year.textContent = new Date().getFullYear();
+function openDrawer() {
+  document.body.classList.add("drawerOpen");
+}
 
-  // Active menu
-  const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  document.querySelectorAll('a[data-page]').forEach(a=>{
-    if(a.getAttribute('data-page') === path) a.classList.add('active');
+function closeDrawer() {
+  document.body.classList.remove("drawerOpen");
+}
+
+function initDrawer() {
+  const openBtn = $("#hamburgerBtn");
+  const closeBtn = $("#drawerCloseBtn");
+  const overlay = $("#drawerOverlay");
+  const drawer = $("#drawer");
+
+  if (openBtn) openBtn.addEventListener("click", openDrawer);
+  if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
+  if (overlay) overlay.addEventListener("click", closeDrawer);
+
+  // ESC to close
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDrawer();
   });
 
-  // Drawer (hamburger)
-  const hamBtn = document.getElementById('hamburgerBtn');
-  const overlay = document.getElementById('drawerOverlay');
-  const closeBtn = document.getElementById('drawerCloseBtn');
+  // Close drawer when clicking any link inside
+  if (drawer) {
+    drawer.addEventListener("click", (e) => {
+      const a = e.target.closest("a");
+      if (a) closeDrawer();
+    });
+  }
+}
 
-  function openDrawer(){ document.body.classList.add('drawerOpen'); }
-  function closeDrawer(){ document.body.classList.remove('drawerOpen'); }
-
-  if(hamBtn) hamBtn.addEventListener('click', openDrawer);
-  if(closeBtn) closeBtn.addEventListener('click', closeDrawer);
-  if(overlay) overlay.addEventListener('click', closeDrawer);
-
-  // Close on ESC
-  window.addEventListener('keydown', (e)=>{
-    if(e.key === 'Escape') closeDrawer();
-  });
-
-  // Close drawer when clicking any drawer link
-  document.querySelectorAll('.drawerNav a').forEach(a=>{
-    a.addEventListener('click', closeDrawer);
-  });
-})();
+// ===== boot =====
+setYear();
+initTheme();
+initDrawer();
