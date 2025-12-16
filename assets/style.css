@@ -132,8 +132,27 @@ a{color:inherit;text-decoration:none}
   .grid2{grid-template-columns: 1fr}
 }
 
-.cards{display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;}
-@media (max-width: 920px){ .cards{grid-template-columns:1fr} }
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* 920px 이하에서도 가로(2열/1열) 자동 유지 */
+@media (max-width: 920px){
+  .menu{display:none}
+  .grid2{grid-template-columns: 1fr}
+  /* .cards는 건드리지 않음 (auto-fit 유지) */
+}
+
+/* 카드 겹쳐보임/글자 깨짐 방지 */
+.svc, .svc *{
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
 
 .icon{
   width:40px;height:40px;border-radius:14px;display:grid;place-items:center;
@@ -243,5 +262,6 @@ small.mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "
 }
 .drawerOpen .drawerOverlay{opacity:1; pointer-events:auto;}
 .drawerOpen .drawer{transform: translateX(0);}
+
 
 
