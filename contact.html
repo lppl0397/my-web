@@ -1,79 +1,55 @@
-<!DOCTYPE html>
-<html lang="ko" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | DAGAKPLUS TECHNOLOGY</title>
-  <link rel="stylesheet" href="assets/style.css" />
-</head>
-<body>
-
-<header class="nav">
-  <div class="inner">
-    <a class="brand" href="index.html">
-      <div class="logo"></div>
-      <div class="brandText">
-        <div class="brandTitle">DAGAKPLUS TECHNOLOGY</div>
-        <div class="brandSub">Driving Technology Forward</div>
-      </div>
-    </a>
-
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="company.html">Company</a>
-      <a href="notice.html">Notice</a>
-      <a class="active" href="contact.html">Contact</a>
-    </nav>
-
-    <div class="navRight">
-      <button class="iconBtn" id="themeBtn">🌙</button>
-      <a class="ctaBtn" href="contact.html">프로젝트 문의</a>
-      <button class="iconBtn hamburger" id="hamburgerBtn">☰</button>
-    </div>
+<form
+  class="formGrid"
+  action="https://formspree.io/f/xxxxabcd"
+  method="POST"
+>
+  <!-- 이름 -->
+  <div class="field">
+    <label>전체 이름<span class="req">*</span></label>
+    <input
+      class="input"
+      type="text"
+      name="name"
+      placeholder="홍길동"
+      required
+    />
   </div>
-</header>
 
-<section class="section">
-  <div class="wrap">
-    <div class="pagehead">
-      <h1>Contact</h1>
-      <p>프로젝트 및 기술 문의</p>
-    </div>
-
-    <div class="card pad">
-      <ul class="list">
-        <li><b>Email</b> : dagak@dagakplus.co.kr</li>
-        <li><b>Phone</b> : 010-9459-8976</li>
-        <li><b>Address</b> : 대전광역시 서구 계백로 1161, 유니온빌딩 4층 404-S150호</li>
-      </ul>
-    </div>
+  <!-- 이메일 -->
+  <div class="field">
+    <label>이메일<span class="req">*</span></label>
+    <input
+      class="input"
+      type="email"
+      name="email"
+      placeholder="name@company.com"
+      required
+    />
   </div>
-</section>
 
-<footer class="foot">
-  <div class="wrap tight">
-    <small>© <span id="year"></span> DAGAKPLUS TECHNOLOGY</small>
+  <!-- 메시지 -->
+  <div class="field">
+    <label>메시지<span class="req">*</span></label>
+    <textarea
+      class="textarea"
+      name="message"
+      placeholder="문의 내용을 입력해주세요."
+      required
+    ></textarea>
   </div>
-</footer>
 
-<div class="drawerOverlay" id="drawerOverlay"></div>
-<aside class="drawer" id="drawer">
-  <div class="drawerHeader">
-    <strong>DAGAKPLUS TECHNOLOGY</strong>
-    <button class="iconBtn" id="drawerCloseBtn">✕</button>
+  <!-- 숨김 필드 (메일 제목/출처용) -->
+  <input type="hidden" name="_subject" value="[DAGAKPLUS] 홈페이지 문의" />
+  <input type="hidden" name="_template" value="table" />
+
+  <div class="formActions">
+    <button class="btn primary" type="submit">
+      메시지 보내기
+    </button>
+    <a class="btn" href="mailto:dagak@dagakplus.co.kr">메일로 문의</a>
   </div>
-  <nav class="drawerNav">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="company.html">Company</a>
-    <a href="notice.html">Notice</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</aside>
 
-<script src="assets/app.js"></script>
-</body>
-</html>
-
-
+  <div class="formHint">
+    * 입력하신 정보는 문의 응답 외 다른 용도로 사용되지 않습니다.
+  </div>
+</form>
