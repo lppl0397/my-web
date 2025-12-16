@@ -1,117 +1,77 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | DAGAKPLUS TECHNOLOGY</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+
 <header class="nav">
   <div class="inner">
     <a class="brand" href="index.html">
-      <div class="logo" aria-hidden="true"></div>
-      <div>
-        <span>DAGAKPLUS <span style="opacity:.9">TECHNOLOGY</span></span>
-        <small>Driving Technology Forward</small>
+      <div class="logo"></div>
+      <div class="brandText">
+        <div class="brandTitle">DAGAKPLUS TECHNOLOGY</div>
+        <div class="brandSub">Driving Technology Forward</div>
       </div>
     </a>
 
-    <nav class="menu" aria-label="Primary">
-      <a href="index.html" data-page="index.html">Home</a>
-      <a href="services.html" data-page="services.html">Services</a>
-      <a href="company.html" data-page="company.html">Company</a>
-      <a href="notice.html" data-page="notice.html">전자공고</a>
-      <a href="contact.html" data-page="contact.html">Contact</a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="company.html">Company</a>
+      <a href="notice.html">전자공고</a>
+      <a class="active" href="contact.html">Contact</a>
     </nav>
 
-    <div style="display:flex; gap:10px; align-items:center;">
-      <button class="btn ghost" id="themeBtn" aria-label="Toggle theme">🌙</button>
-      <a class="btn primary" href="contact.html">프로젝트 문의</a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+    <div class="navRight">
+      <button class="iconBtn" id="themeBtn">🌙</button>
+      <a class="ctaBtn" href="contact.html">프로젝트 문의</a>
+      <button class="iconBtn hamburger" id="hamburgerBtn">☰</button>
     </div>
   </div>
 </header>
 
-<!-- Drawer -->
-<div class="drawerOverlay" id="drawerOverlay" aria-hidden="true"></div>
-<aside class="drawer" aria-label="Mobile menu">
-  <div class="drawerHeader">
-    <div style="font-weight:950; letter-spacing:.2px;">
-      DAGAKPLUS TECHNOLOGY
-      <div style="font-size:12px; color: var(--muted); font-weight:900; margin-top:3px;">
-        Driving Technology Forward
-      </div>
+<section class="section">
+  <div class="wrap">
+    <div class="pagehead">
+      <h1>Contact</h1>
+      <p>프로젝트 및 기술 문의</p>
     </div>
-    <button class="btn" id="drawerCloseBtn" aria-label="Close menu">✕</button>
-  </div>
 
-  <nav class="drawerNav" aria-label="Drawer links">
-    <a href="index.html" data-page="index.html">Home</a>
-    <a href="services.html" data-page="services.html">Services</a>
-    <a href="company.html" data-page="company.html">Company</a>
-    <a href="notice.html" data-page="notice.html">전자공고</a>
-    <a href="contact.html" data-page="contact.html">Contact</a>
+    <div class="card pad">
+      <ul class="list">
+        <li><b>Email</b> : dagak@dagakplus.co.kr</li>
+        <li><b>Phone</b> : 010-9459-8976</li>
+        <li><b>Address</b> : 대전광역시 서구 계백로 1161, 유니온빌딩 4층 404-S150호</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap tight">
+    <small>© <span id="year"></span> DAGAKPLUS TECHNOLOGY</small>
+  </div>
+</footer>
+
+<div class="drawerOverlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawerHeader">
+    <strong>DAGAKPLUS TECHNOLOGY</strong>
+    <button class="iconBtn" id="drawerCloseBtn">✕</button>
+  </div>
+  <nav class="drawerNav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="company.html">Company</a>
+    <a href="notice.html">전자공고</a>
+    <a href="contact.html">Contact</a>
   </nav>
-
-  <div class="drawerActions">
-    <a class="btn primary" href="contact.html">프로젝트 문의</a>
-    <a class="btn" href="mailto:dagak@dagakplus.co.kr?subject=[DAGAKPLUS]%20문의">메일</a>
-    <a class="btn" href="tel:+821094598976">전화</a>
-  </div>
 </aside>
 
-  <main class="wrap">
-    <div class="pagehead">
-      <div>
-        <h1>Contact</h1>
-        <p>상담/견적/제안서 지원 — 빠르게 답변드립니다</p>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="card"><div class="pad">
-        <h3 style="margin:0 0 10px">문의 채널</h3>
-	<ul class="list">
-  		<li><b>Email</b> — <a href="mailto:dagak@dagakplus.co.kr">dagak@dagakplus.co.kr</a></li>
-  		<li><b>Phone</b> — <a href="tel:+821094598976">010-9459-8976</a></li>
-  		<li><b>Address</b> — 대전광역시 서구 계백로 1161, 유니온빌딩 4층 404 - S150호</li>
-	</ul>
-
-        <div style="height:12px"></div>
-       <a class="btn primary"
-   href="mailto:dagak@dagakplus.co.kr?subject=[DAGAKPLUS]%20프로젝트%20문의&body=1)%20회사/기관:%0A2)%20현황:%0A3)%20목표(RPO/RTO%20포함):%0A4)%20예산/일정:%0A5)%20연락처:%0A">
-  메일로 문의하기
-</a>
-
-      </div></div>
-
-      <div class="card"><div class="pad">
-        <h3 style="margin:0 0 10px">요청서(복붙용)</h3>
-        <p style="margin:0; color:var(--muted); line-height:1.8; font-weight:800">
-          아래 항목만 보내주면 견적/일정/리스크를 빠르게 잡아드립니다.
-        </p>
-        <div style="height:10px"></div>
-        <div class="card" style="box-shadow:none;background:rgba(255,255,255,.03)">
-          <div class="pad">
-            <small class="mono" style="display:block; line-height:1.8; color:var(--muted); font-weight:900">
-[1] 회사/기관:<br/>
-[2] 현황(구성/버전/대수):<br/>
-[3] 목표(성능/가용성/RPO/RTO):<br/>
-[4] 예산/일정:<br/>
-[5] 연락처:
-            </small>
-          </div>
-        </div>
-      </div></div>
-    </div>
-
-    <footer class="foot">
-      <b style="color:var(--text)">DAGAKPLUS TECHNOLOGY</b><br/>
-      <span>© <span id="year"></span> DAGAKPLUS. All rights reserved.</span>
-    </footer>
-  </main>
-
-  <script src="assets/app.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>
