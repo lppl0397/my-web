@@ -1,33 +1,105 @@
-<form class="formGrid"
-      action="https://formspree.io/f/xxxxabcd"
-      method="POST">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | DAGAKPLUS TECHNOLOGY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css?v=999">
+</head>
+<body>
 
-  <div class="field">
-    <label>전체 이름<span class="req">*</span></label>
-    <input class="input" type="text" name="name" placeholder="홍길동" required>
+<header class="nav">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <div class="logo"></div>
+      <div>
+        DAGAKPLUS TECHNOLOGY
+        <small>Driving Technology Forward</small>
+      </div>
+    </a>
+    <a class="btn primary" href="contact.html">프로젝트 문의</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="pagehead">
+    <h1>Contact</h1>
+    <p>프로젝트 및 기술 문의</p>
   </div>
 
-  <div class="field">
-    <label>이메일<span class="req">*</span></label>
-    <input class="input" type="email" name="email" placeholder="name@company.com" required>
-  </div>
+  <div class="contactGrid">
 
-  <div class="field">
-    <label>메시지<span class="req">*</span></label>
-    <textarea class="textarea" name="message" placeholder="문의 내용을 입력해주세요." required></textarea>
-  </div>
+    <!-- LEFT -->
+    <div class="card pad">
+      <h3>DAGAKPLUS TECHNOLOGY</h3>
+      <p class="formHint">
+        인프라 / 클라우드 / DR / VDI<br>
+        프로젝트 상담은 아래로 문의해주세요.
+      </p>
 
-  <input type="text" name="_gotcha" style="display:none">
-  <input type="hidden" name="_subject" value="[DAGAKPLUS] 홈페이지 문의">
-  <input type="hidden" name="_next" value="https://dagakplus.co.kr/thanks.html">
-  <input type="hidden" name="_template" value="table">
+      <div class="infoBlock">
+        <b>Email</b><br>
+        dagak@dagakplus.co.kr
+      </div>
 
-  <div class="formActions">
-    <button class="btn primary" type="submit">메시지 보내기</button>
-    <a class="btn" href="mailto:dagak@dagakplus.co.kr">메일로 문의</a>
-  </div>
+      <div class="infoBlock">
+        <b>Phone</b><br>
+        010-9459-8976
+      </div>
 
-  <div class="formHint">
-    * 입력하신 정보는 문의 응답 외 다른 용도로 사용되지 않습니다.
+      <div class="infoBlock">
+        <b>Address</b><br>
+        대전광역시 서구 계백로 1161<br>
+        유니온빌딩 4층 404-S150호
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="card pad">
+      <h3>문의 남기기</h3>
+
+      <form class="formGrid"
+        action="https://formspree.io/f/xxxxabcd"
+        method="POST">
+
+        <div class="field">
+          <label>전체 이름<span class="req">*</span></label>
+          <input class="input" type="text" name="name" required>
+        </div>
+
+        <div class="field">
+          <label>이메일<span class="req">*</span></label>
+          <input class="input" type="email" name="email" required>
+        </div>
+
+        <div class="field">
+          <label>메시지<span class="req">*</span></label>
+          <textarea class="textarea" name="message" required></textarea>
+        </div>
+
+        <!-- bot protect -->
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="[DAGAKPLUS] 홈페이지 문의">
+        <input type="hidden" name="_next" value="https://dagakplus.co.kr/thanks.html">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="formActions">
+          <button class="btn primary" type="submit">메시지 보내기</button>
+          <a class="btn" href="mailto:dagak@dagakplus.co.kr">메일 문의</a>
+        </div>
+
+        <div class="formHint">
+          * 입력하신 정보는 문의 응답 외 다른 용도로 사용되지 않습니다.
+        </div>
+      </form>
+    </div>
+
   </div>
-</form>
+</main>
+
+<footer class="foot">
+  © 2025 DAGAKPLUS TECHNOLOGY
+</footer>
+
+</body>
+</html>
